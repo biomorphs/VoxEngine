@@ -12,20 +12,20 @@ set(SDL2_INCLUDE_DIR "${SDL2_ROOT_PATH}/include")
 set(SDL2_LIBRARY "${SDL2_ROOT_PATH}/lib/x86/SDL2.lib")
 set(SDL2_LIBRARY_MAIN "${SDL2_ROOT_PATH}/lib/x86/SDL2main.lib")
 set(SDL2_RUNTIME_LIBRARY "${SDL2_ROOT_PATH}/lib/x86/SDL2.dll")
+
+# Engine root path
 set(VOXENGINE_ROOT_PATH "${CMAKE_SOURCE_DIR}/engine")
 
+# Engine projects
+add_subdirectory (${VOXENGINE_ROOT_PATH}/platform)
+add_subdirectory (${VOXENGINE_ROOT_PATH}/core)
+
 # Launcher project
-add_executable(Launcher launcher/main.cpp)
-target_link_libraries(Launcher ${SDL2_LIBRARY})
-target_link_libraries(Launcher ${SDL2_LIBRARY_MAIN})
+add_subdirectory (${CMAKE_SOURCE_DIR}/launcher)
 
-# Copy SDL2.dll to output directory in post
-add_custom_command(TARGET Launcher POST_BUILD		# Post-build event
-	COMMAND ${CMAKE_COMMAND} -E copy_if_different	# execute "cmake - E copy_if_different..."
-	"${SDL2_RUNTIME_LIBRARY}"						# SDL lib
-	$<TARGET_FILE_DIR:Launcher>)                 	# Output directory
+# Tests project
+add_subdirectory(${CMAKE_SOURCE_DIR}/tests)
 
-# Include engine projects
-add_subdirectory (${VOXENGINE_ROOT_PATH}/kernel)
-target_include_directories(Launcher PUBLIC ${VOXENGINE_ROOT_PATH}/kernel)
-target_link_libraries(Launcher Kernel)
+
+
+

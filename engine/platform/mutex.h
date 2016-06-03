@@ -4,7 +4,7 @@ Matt Hoyle
 */
 #pragma once
 
-namespace Kernel
+namespace Platform
 {
 	class Mutex
 	{

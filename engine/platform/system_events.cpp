@@ -5,11 +5,11 @@ Matt Hoyle
 #include "system_events.h"
 #include <SDL_events.h>
 
-namespace Kernel
+namespace Platform
 {
 	namespace SystemEvents
 	{
-		// Translate any sdl events to kernel system events
+		// Translate any sdl events to platform system events
 		inline Event TranslateEvent(SDL_Event& sdlEvent)
 		{
 			switch (sdlEvent.type)

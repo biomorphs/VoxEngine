@@ -8,7 +8,7 @@ Matt Hoyle
 #include <vector>
 
 // Helpers for loading raw data from external files
-namespace Kernel
+namespace Platform
 {
 	namespace FileIO
 	{

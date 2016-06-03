@@ -7,7 +7,7 @@ Matt Hoyle
 #include "assert.h"
 #include <SDL_thread.h>
 
-namespace Kernel
+namespace Platform
 {
 	Thread::Thread()
 		: m_handle(nullptr)

@@ -6,7 +6,7 @@ Matt Hoyle
 #include "assert.h"
 #include <SDL_mutex.h>
 
-namespace Kernel
+namespace Platform
 {
 	Semaphore::Semaphore(uint32_t initialValue)
 	{

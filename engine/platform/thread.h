@@ -4,11 +4,11 @@ Matt Hoyle
 */
 #pragma once
 
-#include "base_types.h"
+#include <stdint.h>
 #include <string>
 #include <functional>
 
-namespace Kernel
+namespace Platform
 {
 	class Thread
 	{

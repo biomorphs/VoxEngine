@@ -5,17 +5,17 @@ Matt Hoyle
 #include "atomics.h"
 #include <SDL_atomic.h>
 
-namespace Kernel
+namespace Platform
 {
-	struct AtomicInt32::Impl
+	struct AtomicInt32::SDLInternals
 	{
 		SDL_atomic_t m_atomic;
 	};
 
 	AtomicInt32::AtomicInt32()
 	{
-		static_assert(c_storageSize >= sizeof(Impl), "c_storageSize not big enough for this platform");
-		static_assert(c_storageAlign >= alignof(Impl), "c_storageAlign not big enough for this platform");
+		static_assert(c_storageSize >= sizeof(SDLInternals), "c_storageSize not big enough for this platform");
+		static_assert(c_storageAlign >= alignof(SDLInternals), "c_storageAlign not big enough for this platform");
 		Set(0);
 	}
 

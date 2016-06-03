@@ -1,9 +1,8 @@
-#include <stdio.h>
-#include "platform.h"
+#include "platform/platform.h"
 
 int main (int argc, char *argv[])
 {
-	Kernel::Platform::Initialise(argc, argv);
-	Kernel::Platform::Shutdown();
+	Platform::Initialise(argc, argv);
+	Platform::Shutdown();
 	return 0;
 }

@@ -3,9 +3,9 @@ SDLEngine
 Matt Hoyle
 */
 #pragma once
-#include "base_types.h"
+#include <stdint.h>
 
-namespace Kernel
+namespace Platform
 {
 	class Semaphore
 	{

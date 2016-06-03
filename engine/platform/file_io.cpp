@@ -6,7 +6,7 @@ Matt Hoyle
 #include "assert.h"
 #include <fstream>
 
-namespace Kernel
+namespace Platform
 {
 	namespace FileIO
 	{
