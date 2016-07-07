@@ -8,6 +8,7 @@ target_include_directories(Tests PUBLIC ${VOXENGINE_ROOT_PATH})
 
 target_link_libraries(Tests Platform)
 target_link_libraries(Tests Core)
+target_link_libraries(Tests Renderer)
 
 # Tests use Catch framework
 target_include_directories(Tests PUBLIC "${CMAKE_SOURCE_DIR}/external/Catch")

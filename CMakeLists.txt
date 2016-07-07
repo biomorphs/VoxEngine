@@ -19,6 +19,7 @@ set(VOXENGINE_ROOT_PATH "${CMAKE_SOURCE_DIR}/engine")
 # Engine projects
 add_subdirectory (${VOXENGINE_ROOT_PATH}/platform)
 add_subdirectory (${VOXENGINE_ROOT_PATH}/core)
+add_subdirectory (${VOXENGINE_ROOT_PATH}/renderer)
 
 # Launcher project
 add_subdirectory (${CMAKE_SOURCE_DIR}/launcher)
